@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:delimeals/screens/meal_screen_details.dart';
+import 'package:delimeals/screens/tabs_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'screens/categories_screen.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
                 titleSmall:
                     TextStyle(fontFamily: 'RobotoCondensed', fontSize: 20),
               )),
-      home: CategoriesScreen(),
+      home: TabScreen(),
       routes: {
         CategoryMealsScreen.routeName:((context) => CategoryMealsScreen()),
         MealScreenDetails.routeName:(context) => MealScreenDetails()
