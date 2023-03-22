@@ -1,3 +1,4 @@
+import 'package:delimeals/widgets/main_drawer.dart';
 import 'package:flutter/material.dart';
 
 import './categories_screen.dart';
@@ -10,8 +11,8 @@ class TabScreen extends StatefulWidget {
 
 class _TabScreenState extends State<TabScreen> {
   final List<Map<String, dynamic>> _pages = [
-    {'page':CategoriesScreen(),'title':'Categories'},
-    {'page':FavoriteScreen(),'title':'Favorite'}
+    {'page': CategoriesScreen(), 'title': 'Categories'},
+    {'page': FavoriteScreen(), 'title': 'Favorite'}
   ];
 
   int _selectedPageIndex = 0;
@@ -31,6 +32,7 @@ class _TabScreenState extends State<TabScreen> {
           style: Theme.of(context).textTheme.titleMedium,
         ),
       ),
+      drawer: MainDrawer(),
       body: _pages[_selectedPageIndex]['page'],
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectPage,
